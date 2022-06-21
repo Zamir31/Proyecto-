@@ -1,0 +1,75 @@
+* { /* selector general que aplica para toda la página */
+    font-family: 'Fraunces', serif; /*Estilo de fuente de todo el texto utilizado en la página*/
+    color: #fff; /* Color de todo el texto dentro de la página */
+}
+
+body { /* cuerpo de la página */
+    background-color: #fff; /* Color de fondo de la página*/
+}
+
+
+.container { /* Contenedor que guarda la calculadora */
+    display: flex; /*Le da forma a la calculadora*/
+    justify-content: center; /*Centrar el contenido*/
+    align-items: center; /*Centrar los items dentro del contenido*/
+    height: 100vh; /*altura para centrarlo*/
+}
+
+.calculadora { /* contenedor calculadora que guarda la calculadora en si */
+    display: grid; /*Le da forma a la calculadora*/
+    grid-template-columns: repeat(4, 75px); /*Numero de columnas y su tamaño*/
+    grid-template-rows: 160px repeat(5, 75px); /*Numero de filas y su tamaño*/
+    background-color: #323232; /*Color de la calculadora*/
+    padding: 15px; /* Relleno de la calculadora */
+    border-radius: 32px; /* Borde redondeado de la calculadora */
+    box-shadow: 15px 10px 0px 5px #00000033; /* efecto de sombra detrás de la calculadora  */
+}
+
+.calculadora-display { /* Pantalla de la calculadora */
+    grid-column: 1 / -1; /* Para separar el display de los botones */
+    padding: 10px; /*  Relleno del display  */ 
+    margin: 10px 10px 20px; /* Para ajustar la pantallita de display  */
+    background-color: #363636; /* Color del display */
+    border-radius: 32px; /* Borde redondeado del display */
+    text-align: right; /* Alinear los numeros a la derecha */
+    box-shadow: 0px 0px 0px 10px #00000033; /* Sombra detrás de la pantalla de display */
+    font-size: 40px; /* Tamaño de los numeros en la pantalla display */
+}
+
+.boton{ /* Botones AC, BORRAR y HISTORIAL*/
+  background-color: #bababa; /* Color de los botones*/
+}
+ 
+button { /* Botones en general */
+    cursor: pointer; /* Animación del cursor cuando esté sobre un botón */
+    margin: 5px; /* Separación de los botones */
+    border-radius: 32px; /* Hacer los botones circulares */
+    font-size: 1.5em; /* Tamaño de los numeros en los botones */
+    border: none; /* Eliminar el borde en los botones */
+    background-color: #454546; /* Color de los botones */
+    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #2D2D2D; /* Sombra detrás de los botones */     
+}
+button:active{ /* aplicar estas reglas cuando el botón sea seleccionado */
+    background: #e5e5e5; /* color del boton cuando se seleccione */
+}
+
+
+.operador { /* Botones operadores */
+  cursor: pointer; /* animacion del cursor cuando estes sobre los botones de operadores*/
+  margin: 5px; /* separación de los botones */
+  border-radius: 32px; /* para hacer los botones circulares*/
+  font-size: 1.5em; /* tamaño de los numeros dentro de los botones*/
+  border: none; /* Eliminar el borde en los botones */
+  background-color: #EC9F1A; /* Color de los botones operadores*/
+  box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #2D2D2D; /* sombra detrás de los botones operadores */
+}
+
+.historial{
+  cursor: pointer; /* animacion del cursor cuando estes sobre los botones de operadores*/
+  margin: 5px 0px; /* separación de los botones */
+  border-radius: 32px; /* para hacer los botones circulares*/
+  font-size: 1.5em; /* tamaño de los numeros dentro de los botones*/
+  border: none; /* Eliminar el borde en los botones */
+  width: 300px; /* Tamaño del boton Historial*/
+}
+
